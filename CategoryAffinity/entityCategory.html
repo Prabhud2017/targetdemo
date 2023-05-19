@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="keywords" content="htmlcss bootstrap, multi level menu, submenu, treeview nav menu examples" />
+<meta name="description" content="Bootstrap 5 navbar multilevel treeview examples for any type of project, Bootstrap 5" />  
+
+<title>Demo - entity.CategoryId</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+
+<style type="text/css">
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+}
+
+/* ============ desktop view ============ */
+@media all and (min-width: 992px) {
+
+	.dropdown-menu li{
+		position: relative;
+	}
+	.dropdown-menu .submenu{ 
+		display: none;
+		position: absolute;
+		left:100%; top:-7px;
+	}
+	.dropdown-menu .submenu-left{ 
+		right:100%; left:auto;
+	}
+
+	.dropdown-menu > li:hover{ background-color: #f1f1f1 }
+	.dropdown-menu > li:hover > .submenu{
+		display: block;
+	}
+	
+	.navbar .nav-item:hover > .dropdown-menu{ display: block; }
+}	
+/* ============ desktop view .end// ============ */
+
+/* ============ small devices ============ */
+@media (max-width: 991px) {
+
+.dropdown-menu .dropdown-menu{
+		margin-left:0.7rem; margin-right:0.7rem; margin-bottom: .5rem;
+}
+
+}	
+/* ============ small devices .end// ============ */
+
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="at.js" async></script>
+</head>
+<body>
+
+<header class="section-header py-4">
+<div class="container">
+	<h2>entity.categoryID - Demo page</h2> 
+</div>
+</header> <!-- section-header.// -->
+
+<div class="container">
+
+<!-- ============= COMPONENT ============== -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+ <div class="container-fluid">
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  <div class="collapse navbar-collapse" id="main_nav">
+	
+
+	<ul class="navbar-nav">
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" category="Clothing">CLOTHING</a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#" category="Clothing-Men"> Men &raquo; </a>
+			  	 <ul class="submenu dropdown-menu">
+				    <li><a class="dropdown-item" href="#" category="Clothing-Men-Shirts">Shirts &raquo; </a>
+					    <ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Men,Clothing-Men-Shirts">Shirt 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Men,Clothing-Men-Shirts">Shirt 2</a></li>
+						</ul>
+					</li>
+				    <li><a class="dropdown-item" href="#" category="Clothing-Men-Pants">Pants &raquo; </a>
+					    <ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Men,Clothing-Men-Pants">Pant 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Men,Clothing-Men-Pants">Pant 2</a></li>
+						</ul>
+					</li>
+				    <li><a class="dropdown-item" href="#" category="Clothing-Men-Shoes">Shoes &raquo; </a>
+				    	<ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Men,Clothing-Men-Shoes">Shoe 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Men,Clothing-Men-Shoes">Shoe 2</a></li>
+						</ul>
+				    </li>
+				 </ul>
+			  </li>
+			  <li><a class="dropdown-item" href="#" category="Clothing-Women"> Women &raquo; </a>
+			  	 <ul class="submenu dropdown-menu">
+				     <li><a class="dropdown-item" href="#" category="Clothing-Women-Tops">Tops &raquo; </a>
+					    <ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Women,Clothing-Women-Tops">Top 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Women,Clothing-Women-Tops">Top 2</a></li>
+						</ul>
+					</li>
+				    <li><a class="dropdown-item" href="#" category="Clothing-Women-Pants">Pants &raquo; </a>
+					    <ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Women,Clothing-Women-Pants">Pant 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Women,Clothing-Women-Pants">Pant 2</a></li>
+						</ul>
+					</li>
+				    <li><a class="dropdown-item" href="#" category="Clothing-Women-Shoes">Shoes &raquo; </a>
+				    	<ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Women,Clothing-Women-Shoes">Shoe 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Clothing,Clothing-Women,Clothing-Women-Shoes">Shoe 2</a></li>
+						</ul>
+				    </li>
+				 </ul>
+			  </li>
+		    </ul>
+		</li>
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#"  category="Home">HOME</a>
+		    <ul class="dropdown-menu">
+			  <li><a class="dropdown-item" href="#" category="Home-Bedding"> Bedding &raquo; </a>
+			  	 <ul class="submenu dropdown-menu">
+				    <li><a class="dropdown-item" href="#" category="Home,Home-Bedding,Home-Bedding-Blankets">Blankets</a></li>
+				    <li><a class="dropdown-item" href="#" category="Home-Bedding-Comforters">Comforters  &raquo; </a>
+					    <ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Bedding,Home-Bedding-Comforters">Comforter 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Bedding,Home-Bedding-Comforters">Comforter 2</a></li>
+						</ul>
+					</li>
+				    <li><a class="dropdown-item" href="#" category="Home,Home-Bedding,Home-Bedding-Pillows">Pillows</a></li>
+				 </ul>
+			  </li>
+			  <li><a class="dropdown-item" href="#" category="Home-Kitchen"> Kitchen &raquo; </a>
+			  	 <ul class="submenu dropdown-menu">
+				    <li><a class="dropdown-item" href="#" category="Home-Kitchen-Cookware">Cookware &raquo; </a>
+				    	<ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#"  category="Home,Home-Kitchen,Home-Kitchen-Cookware">Cookware 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Kitchen,Home-Kitchen-Cookware">Cookware 2</a></li>
+							<li><a class="dropdown-item" href="#" category="Home,Home-Kitchen,Home-Kitchen-Cookware">Cookware 3</a></li>
+						</ul>
+				    </li>
+				    <li><a class="dropdown-item" href="#" category="Home,Home-Kitchen,Home-Kitchen-CutleryandKnives">Cutlery & Knives</a></li>
+				    <li><a class="dropdown-item" href="#" category="Home,Home-Kitchen,Home-Kitchen-Grilling">Grilling</a></li>
+				 </ul>
+			  </li>
+			  <li><a class="dropdown-item" href="#" category="Home-Dining"> Dining &raquo; </a>
+			  	 <ul class="submenu dropdown-menu">
+				    <li><a class="dropdown-item" href="#" category="Home-Dining-Dinnerware">Dinnerware &raquo; </a>
+				    	<ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Dining,Home-Dining-Dinnerware">Dinnerware 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Dining,Home-Dining-Dinnerware">Dinnerware 2</a></li>
+						</ul>
+				    </li>
+					<li><a class="dropdown-item" href="#" category="Home-Dining-Serveware">Serveware &raquo; </a>
+				    	<ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Dining,Home-Dining-Serveware">Serveware 1</a></li>
+						    <li><a class="dropdown-item" href="#" category="Home,Home-Dining,Home-Dining-Serveware">Serveware 2</a></li>
+						</ul>
+				    </li>
+				    <li><a class="dropdown-item" href="#" category="Home-Dining-TableLinens">Table Linens &raquo; </a>
+					    <ul class="submenu dropdown-menu">
+						    <li><a class="dropdown-item" href="#"  category="Home,Home-Dining,Home-Dining-TableLinens,Home-Dining-TableLinens-Placemat">Placemat</a></li>
+						    <li><a class="dropdown-item" href="#"  category="Home,Home-Dining,Home-Dining-TableLinens,Home-Dining-TableLinens-Tablecloth">Tablecloth</a></li>
+						</ul>
+					</li>
+				 </ul>
+			  </li>
+		    </ul>
+		</li>				
+	</ul>
+
+  </div> <!-- navbar-collapse.// -->
+ </div> <!-- container-fluid.// -->
+</nav>
+
+<!-- ============= COMPONENT END// ============== -->
+
+<section class="section-content py-5" style="display:none;">
+	<div class="row">
+		<div class="col-6">
+			<table class="table">
+				<tbody>
+				   <tr class="table-dark">
+					  <th scope="row">FAVIOURITE CATEGORY</th>
+					  <td id="fav"></td>
+					</tr>
+					<tr class="table-primary">
+					  <th scope="row">FIRST CATEGORY</th>
+					  <td  id="first"></td>
+					</tr>
+					<tr class="table-secondary">
+					  <th scope="row">SECOND CATEGORY</th>
+					  <td  id="second"></td>
+					</tr>
+					<tr class="table-success">
+					  <th scope="row">THIRD CATEGORY</th>
+					  <td  id="third"></td>
+					</tr>
+					<tr class="table-danger">
+					  <th scope="row">FOURTH CATEGORY</th>
+					  <td  id="fourth"></td>
+					</tr>
+					<tr class="table-warning">
+					  <th scope="row">FIFTH CATEGORY</th>
+					  <td  id="fifth"></td>
+					</tr>
+				</tbody>
+		  </table>
+		</div>
+	</div>
+</section>
+
+</div><!-- container //  -->
+<script>
+$( "a" ).on( "click", function() {
+	var category = $( this ).attr("category");
+	console.info('%c entity.categoryId = ' + category, "font-weight:600;color:#000000;background-color:#55FF55;padding:2px;border-left:5px solid black;");
+	adobe.target.getOffer({   
+	  "mbox": "target-global-mbox", 
+	  "params": { 
+		 "entity.categoryId": category 
+	  }, 
+	  "success": function(offer) {           
+			adobe.target.applyOffer( {  
+			   "mbox": "target-global-mbox", 
+			   "offer": offer  
+			} ); 
+	  },   
+	  "error": function(status, error) {           
+		  console.log('Error', status, error); 
+	  } 
+	});
+});
+</script>
+</body>
+</html>
