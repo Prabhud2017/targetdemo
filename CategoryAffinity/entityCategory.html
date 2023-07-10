@@ -146,7 +146,8 @@ $( "a" ).on( "click", function() {
 	adobe.target.getOffer({   
 	  "mbox": "target-global-mbox", 
 	  "params": { 
-		 "entity.categoryId": category 
+		 "entity.categoryId": category,
+		  "user.categoryId": category
 	  }, 
 	  "success": function(offer) {           
 			adobe.target.applyOffer( {  
